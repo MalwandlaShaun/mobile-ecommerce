@@ -80,20 +80,22 @@ const Cart = () => {
         <View style={styles.bottomCart}>
           <View style={styles.TotalPirceAndTaxes}>
             <View style={styles.subtotal}>
-              <Text style={styles.Pricetext}>Subtotal: R 1250</Text>
+              <Text style={styles.PirceAndTaxestColor}>Subtotal:</Text>
+              <Text style={styles.Pricetext}> R 1250</Text>
             </View>
             <View style={styles.taxes}>
-              <Text style={styles.Pricetext}>Taxes: R 40</Text>
+              <Text style={styles.PirceAndTaxestColor}>Taxes:</Text>
+              <Text style={styles.Pricetext}> R 40</Text>
             </View>
           </View>
           <View style={styles.PirceAndCheckout}>
-             <View style={styles.TolatPrice}>
-
-             </View>
-             <View style={styles.checkOut}>
-
-             </View>
-             
+            <View style={styles.TolatPrice}>
+              <Text style={styles.TotatPriceText}> R 1250</Text>
+            </View>
+            <View style={styles.checkOut}>
+              <Icon name="cart-plus" size={15} color="#90ffff" solid />
+              <Text style={styles.checkOuttext}>Check Out</Text>
+            </View>
           </View>
         </View>
       </View>
@@ -157,9 +159,13 @@ const styles = StyleSheet.create({
     borderRadius: 40,
   },
   text: {
+    flex:1,
     height: 80,
     paddingLeft: 20,
+    marginRight: 20, 
+   
   },
+
   Discriptiontext: {
     paddingTop: 15,
     fontSize: 12,
@@ -171,15 +177,18 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   IncreseDecrease: {
-    flex: 1,
+    flexDirection:'column',
     alignItems: "center",
     backgroundColor: "white",
+    width:30,
+    height:80,
+    justifyContent: "space-between",
   },
   TotalPirceAndTaxes: {
     height: 50,
     width: "100%",
     backgroundColor: "#FDF5E6",
-    flexDirection:'row',
+    flexDirection: "row",
     justifyContent: "space-between",
     paddingHorizontal: 70,
     alignItems: "center",
@@ -190,19 +199,21 @@ const styles = StyleSheet.create({
   },
   PirceAndCheckout: {
     height: 105,
-    backgroundColor: "brown",
+    backgroundColor: "white",
     flexDirection: "row",
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
-    
+    justifyContent: "space-between",
+    alignItems: "center",
+    paddingHorizontal: 30,
   },
   Decrease: {
     backgroundColor: "white",
-    height: 16,
-    width: 16,
+    height: 30,
+    width: 30,
     justifyContent: "center",
     alignItems: "center",
-    borderRadius: 8,
+    borderRadius: 15,
     fontWeight: "bold",
     shadowColor: "black",
     shadowOffset: { width: 0, height: 2 },
@@ -213,19 +224,42 @@ const styles = StyleSheet.create({
 
   Increase: {
     backgroundColor: "#90ffff",
-    height: 16,
-    width: 16,
+    height: 30,
+    width: 30,
     justifyContent: "center",
     alignItems: "center",
-    borderRadius: 8,
+    borderRadius: 15,
     fontWeight: "bold",
   },
-  subtotal:{
-
+  subtotal: {
+    flexDirection: "row",
   },
-  taxes:{
-
-  }
+  taxes: {
+    flexDirection: "row",
+  },
+  checkOut: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    height: 40,
+    borderRadius: 20,
+    backgroundColor: "#123499",
+    width: 120,
+    paddingHorizontal: 15,
+  },
+  TotatPriceText: {
+    fontSize: 35,
+    fontWeight: "bold",
+  },
+  checkOuttext: {
+    fontSize: 13,
+    color: "white",
+  },
+  PirceAndTaxestColor: {
+    fontSize: 15,
+    color: "grey",
+    fontWeight: "bold",
+  },
 });
 
 export default Cart;
