@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { StyleSheet } from "react-native";
 
 export default styles = StyleSheet.create({
@@ -8,3 +9,8 @@ export default styles = StyleSheet.create({
     backgroundColor: "lime",
   },
 });
+=======
+import { StyleSheet } from "react-native";
+
+export default styles = StyleSheet.create({});
+>>>>>>> 9da7291d48da64e0a9a2c766e1c6a82558e1378d
