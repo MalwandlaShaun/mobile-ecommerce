@@ -9,7 +9,6 @@ import {
   View,
 } from "react-native";
 import React from "react";
-import Icon from "react-native-vector-icons/FontAwesome5";
 
 const LandingScreen = () => {
   const optionsArray = [
@@ -71,16 +70,13 @@ const LandingScreen = () => {
               backgroundColor: "gray",
             }}
           ></View>
-          <TouchableOpacity
+          <View
             style={{
               height: 50,
               width: 50,
-              padding: 10,
-              // backgroundColor: "gray",
+              backgroundColor: "gray",
             }}
-          >
-            <Icon name="search" size={32} color="black" />
-          </TouchableOpacity>
+          ></View>
         </View>
         <View
           style={{
@@ -96,6 +92,7 @@ const LandingScreen = () => {
             style={{
               height: 50,
               width: 150,
+              backgroundColor: "gray",
             }}
           >
             <Text
@@ -113,20 +110,9 @@ const LandingScreen = () => {
             style={{
               height: 50,
               width: 80,
-              // backgroundColor: "gray",
+              backgroundColor: "gray",
             }}
-          >
-            <Text
-              style={{
-                color: "gray",
-                fontSize: 16,
-                paddingVertical: 14,
-                textAlign: "center",
-              }}
-            >
-              sort by
-            </Text>
-          </View>
+          ></View>
         </View>
         <View
           style={{
