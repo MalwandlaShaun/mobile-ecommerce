@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, SafeAreaView } from "react-native";
+import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity } from "react-native";
 
 function ProductDetails() {
   return (
@@ -9,7 +9,7 @@ function ProductDetails() {
             height: 50,
             width: "100%",
             marginTop: 30,
-            backgroundColor: "blue",
+            // backgroundColor: "blue",
             flexDirection: "row",
             justifyContent: "space-between",
           }}
@@ -29,7 +29,7 @@ function ProductDetails() {
             height: "45%",
             width: "100%",
             marginTop: 10,
-            backgroundColor: "blue",
+            // backgroundColor: "blue",
             flexDirection: "row",
             justifyContent: "space-around"
           }}
@@ -47,36 +47,73 @@ function ProductDetails() {
         </View>
         <View
           style={{
-            height: "30%",
+            height: "42.5%",
             width: "100%",
-            marginTop: 2,
-            backgroundColor: "lime",
+            backgroundColor: "lightgrey",
+            borderRadius: 30,
           }}
         >
             <View style={{
                 padding: 20,
             }}>
-                <Text>Nike Air Max 200</Text>
-                <Text>Built for natural motion, the Nike Flex shoes</Text>
+                <Text style={{fontSize: 25, fontWeight: "bold"}}>Nike Air Max 200</Text>
+                <Text style={{fontSize: 15, fontWeight: "normal"}}>Built for natural motion, the Nike Flex shoes</Text>
             </View>
-            <View>
+            <View style={{
+                paddingHorizontal: 20,
+                paddingVertical: 10,
+                flexDirection: "row",
+                
+            }}>
+                <View style={{ height: 35, justifyContent: "center"}}>
                 <Text>Size:</Text>
+                </View>
+                <View style={{
+                flexDirection: "row",
+                
+            }}>
+                    <Text style={{marginLeft: 8, fontSize: 18, fontWeight: "bold", width: 53, height: 35, backgroundColor: "lightblue", borderRadius: 6, padding: 8}}>US 6</Text>
+                    <Text style={{marginLeft: 8, fontSize: 18, fontWeight: "bold", width: 53, height: 35, padding: 8}}>US 7</Text>
+                    <Text style={{marginLeft: 8, fontSize: 18, fontWeight: "bold", width: 53, height: 35, padding: 8}}>US 8</Text>
+                    <Text style={{marginLeft: 8, fontSize: 18, fontWeight: "bold", width: 53, height: 35, padding: 8}}>US 9</Text>
+                </View>
             </View>
-            <View>
+            <View style={{
+                paddingHorizontal: 20,
+                paddingVertical: 10,
+                flexDirection: "row",
+            }}>
                 <Text>Available Color:</Text>
+                <View style={{
+                flexDirection: "row",
+                
+            }}>
+                    <TouchableOpacity style={{marginLeft: 20, width: 23, height: 23, backgroundColor: "yellow", borderRadius: 50}}></TouchableOpacity>
+                    <TouchableOpacity style={{marginLeft: 20, width: 23, height: 23, backgroundColor: "red", borderRadius: 50}}></TouchableOpacity>
+                    <TouchableOpacity style={{marginLeft: 20, width: 23, height: 23, backgroundColor: "pink", borderRadius: 50}}></TouchableOpacity>
+                    <TouchableOpacity style={{marginLeft: 20, width: 23, height: 23, backgroundColor: "lightblue", borderRadius: 50}}></TouchableOpacity>
+                </View>
             </View>
         </View>
         <View
           style={{
             height: "12.5%",
             width: "100%",
-            marginTop: 2,
-            backgroundColor: "blue",
+            backgroundColor: "white",
+            borderRadius: 30,
+            position: "absolute", 
+            bottom: 5,
+            padding: 20,
+            flexDirection: "row",
+            justifyContent: "space-between"
           }}
         >
-            <View>
-                <Text></Text>
-            </View>
+            
+                <Text>R 269.00</Text>
+                <TouchableOpacity>
+                    <Text>Add To cart</Text>
+                </TouchableOpacity>
+            
         </View>
       </SafeAreaView>
     </View>
