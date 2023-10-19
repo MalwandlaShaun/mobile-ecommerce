@@ -106,7 +106,7 @@ const LandingScreen = () => {
                 textAlign: "center",
               }}
             >
-              Our Product
+              Our Products
             </Text>
           </View>
           <View
