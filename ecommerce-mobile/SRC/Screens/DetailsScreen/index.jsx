@@ -1,4 +1,5 @@
 import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity } from "react-native";
+import Icon from "react-native-vector-icons/AntDesign";
 
 function ProductDetails() {
   return (
@@ -14,9 +15,11 @@ function ProductDetails() {
             justifyContent: "space-between",
           }}
         >
-          <View
-            style={{ height: 50, width: 50, backgroundColor: "gray" }}
-          ></View>
+          <TouchableOpacity
+            style={{ height: 50, width: 50, padding: 10 }}
+          >
+            <Icon name="arrowleft" size={30} color="black" />
+          </TouchableOpacity>
           <View
             style={{ height: 50, width: 50, backgroundColor: "gray" }}
           ></View>
@@ -65,8 +68,8 @@ function ProductDetails() {
                 flexDirection: "row",
                 
             }}>
-                <View style={{ height: 35, justifyContent: "center"}}>
-                <Text>Size:</Text>
+                <View style={{ height: 35, justifyContent: "center" }}>
+                <Text style={{color: "grey"}}>Size:</Text>
                 </View>
                 <View style={{
                 flexDirection: "row",
@@ -83,7 +86,7 @@ function ProductDetails() {
                 paddingVertical: 10,
                 flexDirection: "row",
             }}>
-                <Text>Available Color:</Text>
+                <Text style={{color: "grey"}}>Available Color:</Text>
                 <View style={{
                 flexDirection: "row",
                 
@@ -108,11 +111,15 @@ function ProductDetails() {
             justifyContent: "space-between"
           }}
         >
-            
-                <Text>R 269.00</Text>
-                <TouchableOpacity>
-                    <Text>Add To cart</Text>
+            <View style={{height: 50, alignSelf: "center"}}>
+                <Text style={{marginLeft: 8, fontSize: 30, fontWeight: "bold", paddingVertical: 10}}>R 269.00</Text>
+            </View>
+            <View style={{height: 35, alignSelf: "center", }}>
+                <TouchableOpacity style={{ fontSize: 14, fontWeight: "bold", width: 110, height: 35, backgroundColor: "lightgrey", borderRadius: 50,flexDirection: "row", alignItems: "center",justifyContent: "space-around" }}>
+                <Icon name="shoppingcart" size={18} color="blue" />
+                    <Text  style={{ color: "blue", textAlign: "right"}}>Add To cart</Text>
                 </TouchableOpacity>
+            </View>
             
         </View>
       </SafeAreaView>
