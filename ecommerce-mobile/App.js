@@ -1,25 +1,12 @@
-import React from 'react';
-import { StyleSheet, Text, View, SafeAreaView, Dimensions } from 'react-native';
-import Cart from './Cart';
-import GlobalStyles from './GlobalStyles';
+import { View, Text } from 'react-native'
+import React from 'react'
 
-const windowWidth = Dimensions.get('window').width;
-
-export default function App() {
+const App = () => {
   return (
-    <SafeAreaView style={[GlobalStyles.droidSafeArea, { width: windowWidth }]}>
-      <View style={styles.container}>
-        <Cart />
-      </View>
-    </SafeAreaView>
-  );
+    <View>
+      <Text>App</Text>
+    </View>
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App
